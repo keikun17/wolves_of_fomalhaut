@@ -47,11 +47,22 @@
 #   end
 # end
 
+
 set :css_dir, 'stylesheets'
 
 set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
+
+# Active autoprefixer from 'middleman-autoprefixer' gem
+
+activate :autoprefixer do
+  # https://github.com/middleman/middleman-autoprefixer
+  # config.browsers = ['last 2 versions', 'Explorer >= 9']
+  # config.cascade  = false
+  # config.inline   = true
+  # config.ignore   = ['hacks.css']
+end
 
 # Build-specific configuration
 configure :build do
